@@ -14,7 +14,7 @@ First, update the code to set the allowed origins. This is required to prevent d
 ````
 On the target domain, host a simple HTML file (say, x-origin-frame.html) that includes and initializes the utility to receive messages from the sender/source.
 
-````
+````JavaScript
     <script>
             var sessionStore = new XOriginSessionStore({
                 //define the source origin that would send messages
@@ -24,7 +24,7 @@ On the target domain, host a simple HTML file (say, x-origin-frame.html) that in
 ````
 On the page that you wish to read/write session data on to target domain, add the following code. Set the receiverUrl to the URL of the HTML page hosted on the target domain (x-origin-frame.html)
 
-````
+````JavaScript
     //handle to perform get/set operations
     var sessionStore;
     
@@ -39,13 +39,13 @@ On the page that you wish to read/write session data on to target domain, add th
 
 To set data on to target origin
 
-````
+````JavaScript
     sessionStore.setItem('key', 'value');
 ````
 
 To read data from target origin
 
-````
+````JavaScript
     sessionStore.getItem('key', function (value) {
         console.log('Value is ' + value);
     });
@@ -53,21 +53,21 @@ To read data from target origin
 
 To remove data from target origin
 
-````
+````JavaScript
     sessionStore.removeItem('key');
 ````
 
 To clear everything on target origin - CAUTION: this will clear all data stored on the target domain, including ones not set by this utility.
 Possible use is during logout when you need to wipe out everything.
 
-````
+````JavaScript
     sessionStore.clear();
 ````
 
 ###Advanced Options
 To perform additional operations on the target page on a set request, you can create 'onSetItem' handlers to perform the required tasks.
 
-````
+````JavaScript
         window.addEventListener('load', function() {
             var sessionStore = new XOriginSessionStore({
                 senderOrigin: 'http://sender.example.com'
@@ -80,6 +80,6 @@ To perform additional operations on the target page on a set request, you can cr
         }
 ````
 
-##Author
+###Author
 arctix
 
