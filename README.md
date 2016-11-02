@@ -81,5 +81,5 @@ To perform additional operations on the target page on a set request, you can cr
 ````
 
 ##Author
-arctix360
+arctix
 
