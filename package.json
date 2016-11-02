@@ -1,0 +1,25 @@
+{
+  "name": "xoriginstore",
+  "version": "1.0.0",
+  "description": "Utility library to allow read/write data in session storage across origin",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arjun Prasad",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-karma": "^2.0.0",
+    "jasmine": "^2.5.2",
+    "jasmine-core": "^2.5.2",
+    "jasmine-jquery": "^2.1.1",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2"
+  }
+}

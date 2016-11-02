@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cross-Origin Data Storage</title>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="../app/app.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <h2>Cross-Origin Data Storage</h2>
+    <h3>Reference Implementation </h3>
+    <p>Javascript on this page can store and retrieve data from session storage for another domain, by including a page from the other domain using an iframe.</p>
+    <p><label for="dataKey">Key: </label><input name='dataKey' id="dataKey" value="sampleKey" /></p>
+    <p><label for="dataValue">Value: </label><input name='dataValue' id="dataValue" value="sampleValue" /></p>
+    <p>
+        <input type="button" value="Get" onclick="getValue()" />
+        <input type="button" value="Set" onclick="setValue()" />
+        <input type="button" value="Clear" onclick="clearValue()" />
+        <input type="button" value="Clear All" onclick="clearAll()" />
+    </p>
+   Here is the target iframe ==>
+ </body>
+</html>
