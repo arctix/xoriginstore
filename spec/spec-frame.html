@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>Error</h1>
+    <p>This page is only for unit testing</p>
+    <script src="../dist/xoriginstore-1.0.0.min.js"></script>    
+    <script>
+        window.addEventListener('load', function() {
+            var sessionStore = new XOriginSessionStore({
+                senderOrigin: 'http://localhost:9876'
+            });
+            sessionStore.onSetItem(onSetHandler);
+        })
+
+        function onSetHandler(key, value) {
+            console.log('On set handler called');
+        }
+    </script>
+</body>
+
+</html>

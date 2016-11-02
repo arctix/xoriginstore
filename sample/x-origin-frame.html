@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>Error</h1>
+    <p>Inner iframe facilitating cross-domain communication. If you are reading this, it means the iframe document URL does not have the same base domain as the parent document URL.</p>
+    <script src="../app/app.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            var sessionStore = new XOriginSessionStore({
+                senderUrl: 'https://sender.example.com'
+            });
+            sessionStore.onSetItem(onSetHandler);
+        })
+
+        function onSetHandler(key, value) {
+            //do whatever extra stuff when an item is set
+        }
+    </script>
+</body>
+
+</html>
